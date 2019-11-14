@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190930234453) do
+ActiveRecord::Schema.define(version: 20191112034308) do
 
   create_table "runs", force: :cascade do |t|
-    t.datetime "date"
-    t.datetime "time"
-    t.float    "distance"
+    t.date     "date"
+    t.time     "time"
+    t.decimal  "distance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
